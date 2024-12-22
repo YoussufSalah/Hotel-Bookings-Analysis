@@ -31,14 +31,6 @@
 
 #### ADR (Average Daily Rate) per Hotel Type
 
-```sql
-SELECT hotel AS "Hotel Type",
-    ROUND(AVG(adr), 2) AS "ADR (Average Daily Rate)"
-FROM bookings_dim
-GROUP BY hotel
-ORDER BY hotel ASC;
-```
-
 -   **Description**: Calculates the average `adr` for each type of hotel.
 -   **Results File**: `/results/2_revenue_analytics/adr_ht.csv`.
 
